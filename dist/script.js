@@ -69,7 +69,7 @@ $(document).ready(function() {
 	    {
 	        "title": "With without you",
 	        "artist": "U2",
-	        "cover": "../image/AudioSlave-Like-a-stone.jpg",
+	        "cover": "../image/with-without-you.jpg",
 	        "num": "8",
 	        "darkColor": "#231F16",
 	        "lightColor": "#c7b2d1"
