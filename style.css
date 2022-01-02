@@ -1,0 +1,454 @@
+/*https://menuju.2030.blogspot.com*/
+html {
+    min-height: 100%;
+  }
+  
+  body {
+    margin: 100px 0;
+    background-image: linear-gradient(#e8ddd7 0%, #b1b9c6 100%);
+  }
+  h1,h2 {
+    font-weight: 100;
+    margin: 0.4em 0;
+  }
+  h1 { font-size: 3.5em; }
+  h2 {
+    color: rgb(230, 229, 224);
+    font-size: 2em;
+  }
+  .shadow {
+    box-shadow: 380px 52px 100px 0 rgba(0, 0, 0, 0.5);
+    width: 260px;
+    height: calc(480px - 80px);
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    margin-left: -520px;
+    z-index: 1;
+  }
+  
+  .card {
+    width: 264px;
+    height: calc(480px - 80px);
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+    background: url("./rfl.jpg")center;
+    background-size: cover;
+  }
+  .card__title {
+    position: absolute;
+    top: 176px;
+    left: 25px;
+    color: rgb(248, 241, 241);
+    margin-right: 5px;
+  }
+  .card__title p, .card__title h2 {
+    margin: 0;
+  }
+  .card__title p {
+    font-size: 10px;
+    color: rgb(243, 239, 234);
+    margin-bottom: 5px;
+  }
+  .card__title h2 {
+    font-size: 26px;
+  }
+  .card__roundings {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
+    top: -47px;
+  }
+  .card__roundings:before {
+    content: "";
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    border-radius: 10px 10px 0 0;
+    width: 100.5%;
+    transform: rotate(-5.6deg);
+    transform-origin: 280px 26px;
+  }
+  .card__roundings--bottom {
+    bottom: calc(-478px + 120px);
+    transform: rotate(180deg);
+    top: inherit;
+  }
+  .card-clock {
+    position: absolute;
+    left: 4px;
+    top: 35px;
+    width: 200px;
+    height: 200px;
+    
+  }
+  .card-clock:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 196px;
+    height: 196px;
+
+  }
+  .card-clock__inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .card-clock__inner:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  
+  }
+  .card-clock__inner:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 0 -4px;
+  }
+  .card-clock__innerHours {
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+    left: 100px;
+    top: 99px;
+    transform-origin: center left;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+  }
+  .card-clock__innerHours:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    left: -15px;
+    background-color: #000;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+  }
+  .card-clock__innerMinutes {
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background-color: #000;
+    left: 100px;
+    top: 99px;
+    transform-origin: center left;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+  }
+  .card-clock__innerMinutes:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    left: -15px;
+    background-color: #000;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+  }
+  .card-clock__innerSeconds {
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    background-color: #000;
+    left: 100px;
+    top: 100px;
+    transform-origin: center left;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+  }
+  .card-clock__innerSeconds:after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 1px;
+    left: -22px;
+    background-color: #000;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+  }
+  .card-clock__innerSeconds:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    top: -1px;
+    left: -22px;
+    background-color: #000;
+  }
+  .card__date {
+    text-transform: uppercase;
+    color: #fff;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+    position: absolute;
+    right: -60px;
+    bottom: 70px;
+    height: 22px;
+    text-align: right;
+  }
+  .card__date h6 {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 10px;
+  }
+  .card__date p {
+    margin: 2px 0 0 0;
+    font-weight: 100;
+    font-size: 9px;
+  }
+  .card__countdown {
+    position: absolute;
+    right: 20px;
+    top: -8px;
+    color: #fff;
+    text-align: right;
+  }
+  .card__countdown p, .card__countdown h4 {
+    margin: 0;
+  }
+  .card__countdown p {
+    text-transform: uppercase;
+    font-size: 9px;
+    color: #161212;
+    margin-bottom: 5px;
+  }
+  .card__countdown h4 {
+    font-size: 14px;
+  }
+  .card__leftCorner {
+    position: absolute;
+    left: 20px;
+    top: 0;
+  }
+  .card__leftCorner span {
+    display: inline-block;
+    width: 1px;
+    margin-right: -1px;
+    height: 12px;
+    background-image: linear-gradient(transparent 0%, #fff 100%);
+  }
+  .card__leftCorner span:nth-child(2) {
+    height: 20px;
+    background-image: linear-gradient(transparent 0%, #fff 100%);
+    margin-bottom: -5px;
+  }
+  .card__leftCorner span:nth-child(3) {
+    height: 9px;
+  }
+  .card__button {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  .card__pager {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    color: #fff;
+  }
+  .card__pager li {
+    margin: 0 10px 0 0;
+    padding: 0 0 5px;
+    border-bottom: 2px solid #fff;
+    font-size: 10px;
+    min-width: 14px;
+    float: left;
+    height: 12px;
+  }
+  .card__pager li:last-child {
+    border-bottom-style: dotted;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=Lato:100,400,900);
+  @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+  
+  ::selection {
+    color: red;
+  }
+  ::-moz-selection {
+    color: red;
+  }
+/*csstanggal*/
+.p {
+    /* margin: 20px; */
+    font-family: "Paytone One";
+    color: #202020;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+  }
+  
+  p span {
+      position:relative;
+    display: auto;
+    margin: 11px 0 17px 0;
+    font-size: 35px;
+    line-height: 60px;
+    color: #dfdb1c;
+    text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+    letter-spacing: 0px;
+  }
+
+  .radio-toolbar input[type="radio"]:checked ~ * { 
+    background:rgb(236, 14, 51) !important;
+}
+  
+  .radio-toolbar label {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 4px 11px;
+    font-family: Arial;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .radio-toolbar input[type="radio"]:checked+label {
+    background-color: #bbb;
+  }
+  
+  /*footer*/
+  /*  footer   */
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+footer p {
+  margin: 10px 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida  Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer .fa-heart{
+  color: red;
+}
+footer .fa-dev{
+  color: #fff;
+}
+footer .fa-twitter-square{
+color:#1da0f1;
+}
+footer .fa-instagram{
+color: #f0007c;
+}
+fotter .fa-linkedin{
+color:#0073b1;
+}
+footer .fa-codepen{
+color:#fff
+}
+footer a {
+  color: #3c97bf;
+  text-decoration: none;
+margin-right:5px;
+}
+.youtubeBtn{
+  position: fixed;
+  left: 50%;
+transform:translatex(-50%);
+  bottom: 45px;
+  cursor: pointer;
+  transition: all .3s;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+}
+.youtubeBtn i{
+ font-size:20px;
+float:left;
+}
+.youtubeBtn a{
+  color:#ff0000;
+  text-shadow: 0px 2px 5px rgba(0,0,0,.5);
+  animation: youtubeAnim 1000ms linear infinite;
+float:right;
+}
+.youtubeBtn a:hover{
+color:#c9110f;
+transition:all .3s ease-in-out;
+text-shadow: none;
+}
+.youtubeBtn i:active{
+transform:scale(.9);
+transition:all .3s ease-in-out;
+}
+.youtubeBtn span{
+  font-family: 'Lato';
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  float: right;
+  line-height: 20px;
+  padding-left: 5px;
+
+}
+
+@keyframes youtubeAnim{
+0%,100%{
+  color:#c9110f;
+}
+50%{
+  color:#ff0000;
+}
+}
+/* footer  */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+	background-color: #111;
+}
+
+.title {
+	font-family: "Montserrat";
+	text-align: center;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	letter-spacing: 1px;
+}
+
+/* styling my button */
+
+.white-mode {
+	text-decoration: none;
+	padding: 7px 10px;
+	background-color: rgb(29, 233, 233);
+	border-radius: 61px;
+	color: #FFF;
+	transition: .35s ease-in-out;
+	position: absolute;
+	left: 7px;
+	bottom: -33px;
+	font-family: "Montserrat";
+}
+
+.white-mode:hover {
+	background-color: #FFF;
+	color: #122;
+}
