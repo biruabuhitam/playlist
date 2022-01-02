@@ -26,8 +26,8 @@ html, body {
 }
 
 body {
-  margin: -6px;
-  padding: 6px;
+  margin: 0px;
+  padding: 0px;
   font-family: Ubuntu, sans;
   font-size: 18px;
   transition: all 0.3s;
