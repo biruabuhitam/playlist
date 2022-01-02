@@ -64,7 +64,6 @@ $(document).ready(function() {
 	        "num": "7",
 	        "darkColor": "#231F16",
 	        "lightColor": "#c7b2d1"
-	    }
             },
 	    {
 	        "title": "With without you",
